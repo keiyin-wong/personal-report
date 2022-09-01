@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jsonDataAdapter class="net.sf.jasperreports.data.json.JsonDataAdapterImpl">
+  <name>Google sheet</name>
+  <dataFile type="httpDataLocation">
+    <url>https://script.google.com/macros/s/AKfycbxpBsMCpwwFH2fsDF9jE5v-M1wO2MPr8U3hEFz_j1epigmgxPbtmn2o52U7pzQyRuoA/exec</url>
+  </dataFile>
+  <selectExpression></selectExpression>
+  <locale>en_MY</locale>
+  <timeZone>Asia/Singapore</timeZone>
+  <useConnection>true</useConnection>
+  <language>json</language>
+</jsonDataAdapter>

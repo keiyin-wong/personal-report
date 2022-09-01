@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2022-08-21T10:20:26 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report4naikniket.31" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e49e5f44-5f51-4b62-90be-ab372edf1c20">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<subDataset name="Dataset1" uuid="8b2b0ca9-3e67-4038-a73c-49958400598b">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="JRSrepo"/>
+		<parameter name="Status" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString language="SQL">
+			<![CDATA[select 'Mak' as employee, 'Present' as status, 30 as days
+union all
+select 'Jezz' as employee, 'Present' as status, 20 as days
+union all
+select 'Rick' as employee, 'Absent' as status, 30 as days
+union all
+select 'Jerry' as employee, 'Absent' as status, 10 as days]]>
+		</queryString>
+		<field name="employee" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="employee"/>
+			<property name="com.jaspersoft.studio.field.label" value="employee"/>
+		</field>
+		<field name="status" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="status"/>
+			<property name="com.jaspersoft.studio.field.label" value="status"/>
+		</field>
+		<field name="days" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.name" value="days"/>
+			<property name="com.jaspersoft.studio.field.label" value="days"/>
+		</field>
+		<filterExpression><![CDATA[$F{status}.equals( $P{Status} )]]></filterExpression>
+	</subDataset>
+	<queryString language="SQL">
+		<![CDATA[select 1 as n]]>
+	</queryString>
+	<field name="n" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="n"/>
+		<property name="com.jaspersoft.studio.field.label" value="n"/>
+	</field>
+	<columnHeader>
+		<band height="35" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="30" uuid="6d09a442-2ba3-49a8-85b0-cea73062f692">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<text><![CDATA[PRESENT EMPLOYEES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="0" width="50" height="30" uuid="01ba8f59-2fd8-4267-9421-f7ab8d6da0db">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<text><![CDATA[DAYS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="170" y="0" width="100" height="30" uuid="88cb6fdc-1765-436a-be3b-41e19484102d">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<text><![CDATA[ABSENT EMPLOYEES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="270" y="0" width="50" height="30" uuid="52741da0-5f28-489b-abe0-0e5a278d4a13">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<text><![CDATA[DAYS]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<componentElement>
+				<reportElement x="0" y="0" width="150" height="30" uuid="62c235fd-9d37-4458-b18e-7f1463146b03"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="Dataset1" uuid="74549617-0354-4fff-b02d-08053fa18d1c">
+						<datasetParameter name="Status">
+							<datasetParameterExpression><![CDATA["Present"]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:listContents height="30" width="150">
+						<textField>
+							<reportElement x="0" y="0" width="100" height="30" uuid="9fcb691f-5c3d-449a-afb3-8ddfbb54a50b"/>
+							<textFieldExpression><![CDATA[$F{employee}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="100" y="0" width="50" height="30" uuid="1edfaefc-11fa-42f7-96aa-7b4e7418042e"/>
+							<textFieldExpression><![CDATA[$F{days}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<componentElement>
+				<reportElement x="170" y="0" width="150" height="30" uuid="70ba789d-914c-44b1-afe9-5ebcbbd9a20e">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="Dataset1" uuid="18329d32-c389-4291-932e-d77faeea7afd">
+						<datasetParameter name="Status">
+							<datasetParameterExpression><![CDATA["Absent"]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:listContents height="30" width="150">
+						<textField>
+							<reportElement x="0" y="0" width="100" height="30" uuid="76af5763-4dc9-42fd-bf70-5cd03ba56cf6"/>
+							<textFieldExpression><![CDATA[$F{employee}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="100" y="0" width="50" height="30" uuid="7a3a1c0c-0088-42bd-9a4f-fbf8c9b8deb8"/>
+							<textFieldExpression><![CDATA[$F{days}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+		</band>
+	</detail>
+</jasperReport>

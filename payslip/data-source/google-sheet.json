@@ -1,0 +1,5 @@
+[
+  { "type": "earning", "name": "BASIC PAY", "amount": "3600" },
+  { "type": "deduction", "name": "EPF", "amount": "300" },
+  { "type": "deduction", "name": "SOCSO", "amount": "15" }
+]

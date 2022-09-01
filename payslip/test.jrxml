@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2022-08-21T10:06:23 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="sample report" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ce1006b4-b668-45a7-b634-b8bce858cc00">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="smapleData4William"/>
+	<property name="net.sf.jasperreports.export.xls.remove.empty.space.between.rows" value="true"/>
+	<property name="net.sf.jasperreports.export.xls.one.page.per.sheet" value="true"/>
+	<property name="net.sf.jasperreports.export.xls.sheet.names.all" value="First sheet/Second sheet/Third sheet/Fourth sheet/Fifth sheet"/>
+	<subDataset name="children" uuid="4f4009a1-920d-4d8c-a9ec-e3ba1e32b79e">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="smapleData"/>
+		<parameter name="Parent" class="java.lang.String">
+			<defaultValueExpression><![CDATA["Bob"]]></defaultValueExpression>
+		</parameter>
+		<queryString language="csv">
+			<![CDATA[]]>
+		</queryString>
+		<field name="COLUMN_0" class="java.lang.String"/>
+		<field name="COLUMN_1" class="java.lang.Integer"/>
+		<filterExpression><![CDATA[$F{COLUMN_0}.equals($P{Parent})]]></filterExpression>
+		<group name="P">
+			<groupExpression><![CDATA[$F{COLUMN_0}]]></groupExpression>
+		</group>
+	</subDataset>
+	<queryString language="csv">
+		<![CDATA[]]>
+	</queryString>
+	<field name="P" class="java.lang.String"/>
+	<field name="C" class="java.lang.Integer"/>
+	<group name="Parent">
+		<groupExpression><![CDATA[$F{P}]]></groupExpression>
+	</group>
+	<group name="parent">
+		<groupExpression><![CDATA[$F{P}]]></groupExpression>
+		<groupHeader>
+			<band height="35">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<textField>
+					<reportElement x="0" y="0" width="100" height="30" uuid="f2965bd8-6e58-4440-a239-40523d430609"/>
+					<box>
+						<topPen lineWidth="1.0"/>
+						<leftPen lineWidth="1.0"/>
+						<bottomPen lineWidth="1.0"/>
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<textElement textAlignment="Center"/>
+					<textFieldExpression><![CDATA[$F{P}]]></textFieldExpression>
+				</textField>
+				<componentElement>
+					<reportElement x="110" y="0" width="30" height="30" uuid="d1043b1a-534b-4a95-8f45-413814480e24">
+						<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.grid.JSSGridBagLayout"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Horizontal">
+						<datasetRun subDataset="children" uuid="5e5cfdc1-dafc-4399-a146-77de6324cddd">
+							<datasetParameter name="Parent">
+								<datasetParameterExpression><![CDATA[$F{P}]]></datasetParameterExpression>
+							</datasetParameter>
+							<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRCsvDataSource(new File("sample-3.csv"))]]></dataSourceExpression>
+						</datasetRun>
+						<jr:listContents height="30" width="30">
+							<textField>
+								<reportElement x="0" y="0" width="30" height="30" uuid="d567e4a7-b45d-464c-afbb-2a7866a13180"/>
+								<box>
+									<pen lineColor="#0099FF"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{COLUMN_1}]]></textFieldExpression>
+							</textField>
+						</jr:listContents>
+					</jr:list>
+				</componentElement>
+			</band>
+		</groupHeader>
+	</group>
+</jasperReport>

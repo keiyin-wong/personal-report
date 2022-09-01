@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jsonDataAdapter class="net.sf.jasperreports.data.json.JsonDataAdapterImpl">
+  <name>Google sheet</name>
+  <dataFile type="httpDataLocation">
+    <url>https://opensheet.elk.sh/1C8p1_UKhUo4W6BWYh94oUbD_TJedM9HgFV0fm1FU610/Sheet1</url>
+  </dataFile>
+  <selectExpression></selectExpression>
+  <locale>en_MY</locale>
+  <timeZone>Asia/Singapore</timeZone>
+  <useConnection>true</useConnection>
+  <language>json</language>
+</jsonDataAdapter>
