@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jdbcDataAdapter class="net.sf.jasperreports.data.jdbc.JdbcDataAdapterImpl"><name>install-service-management</name><driver>org.mariadb.jdbc.Driver</driver><username>wahshoon</username><password>wahshoon</password><savePassword>true</savePassword><url>jdbc:mysql://206.189.83.43:3306/installation_service_test2?useUnicode=true&amp;amp;characterEncoding=UTF-8</url><database></database><serverAddress></serverAddress></jdbcDataAdapter>

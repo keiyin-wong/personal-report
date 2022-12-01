@@ -26,4 +26,11 @@
 		<nature>net.sf.jasperreports.nature</nature>
 		<nature>com.jaspersoft.studio.babel.editor.rbeNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>Invoice.jrxml</name>
+			<type>1</type>
+			<location>P:/Personal projects/eclispse-workspace/install-service-management/src/main/resources/report/Invoice.jrxml</location>
+		</link>
+	</linkedResources>
 </projectDescription>
