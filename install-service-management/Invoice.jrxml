@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
-<!-- 2022-12-02T11:20:52 -->
+<!-- 2022-12-02T13:59:56 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Invoice" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isSummaryWithPageHeaderAndFooter="true" uuid="4eedbb89-b4f6-4469-9ab6-f642a1688cf7">
 	<property name="template.engine" value="tabular_template"/>
 	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
@@ -154,7 +154,7 @@ ORDER BY order_id, line_number ASC;]]>
 Pusat Bandar Puchong, 
 47160 Puchong, 
 Selangor
-Tel: 03-5886 2985]]></text>
+Tel: +60162028010]]></text>
 			</staticText>
 			<textField>
 				<reportElement x="0" y="114" width="170" height="80" uuid="5e4d4893-839d-49ab-91a3-411d4d58608e"/>
@@ -540,9 +540,9 @@ Tel: 03-5886 2985]]></text>
 			<staticText>
 				<reportElement x="349" y="78" width="80" height="20" uuid="db4d73ed-207e-4bb7-9fb1-832edf1ead56"/>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
-					<font size="10" isBold="true"/>
+					<font fontName="SansSerif" size="10" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Deposit Due]]></text>
+				<text><![CDATA[Total]]></text>
 			</staticText>
 			<textField pattern="MYR #,##0.00">
 				<reportElement x="429" y="78" width="126" height="20" uuid="4c316bd3-8b27-49d9-9a08-9111459e35e8"/>
